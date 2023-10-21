@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #364fc7;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Heebo", sans-serif;
+}
+
+a,
+a:active,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--primary-clr);
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  color: var(--primary-clr);
+}
+
+.image-profile {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title {
+  position: relative;
+}
+.title::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  left: 0;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 15px;
+  border-radius: 2px;
+  background: #000;
+}
+
+.icon {
+  top: -5px;
+  left: -30px;
+}
+
+.creator {
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+.creator:hover {
+  color: var(--primary-clr);
+}
+
+.back-to-top {
+  display: inline;
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+  font-size: 30px;
+  color: --primary-clr !important;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  -webkit-animation: action 1s infinite alternate;
+          animation: action 1s infinite alternate;
+}
+.back-to-top:hover {
+  color: var(--primary-clr);
+}
+
+@-webkit-keyframes action {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes action {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+@media (max-width: 991px) {
+  .sticky-lg-top.vh-100 {
+    height: 100% !important;
+  }
+}
